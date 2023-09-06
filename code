@@ -1,0 +1,22 @@
+def simple_selection_sort(data, sort_order):
+    data_length = len(data)
+    for i in range(data_length):
+        current_min_index = i
+        for j in range(i + 1, data_length):
+            if (sort_order == 1 and data[j] < data[current_min_index]) or (sort_order == 2 and data[j] > data[current_min_index]):
+                current_min_index = j
+        data[i], data[current_min_index] = data[current_min_index], data[i]
+        print("[{}] {}".format(i, data))
+
+print("Simple Selection Sort Algorithm")
+data_type = int(input("Type of Data [1] Numbers [2] Alphabets : "))
+num_of_items = int(input("How many {}? : ".format("numbers" if data_type == 1 else "words")))
+
+data = []
+for i in range(num_of_items):
+    item = input("Input {} {} : ".format("Number" if data_type == 1 else "Word", i+1))
+    data.append(int(item) if data_type == 1 else item)
+
+sort_order = int(input("Order [1] Ascending [2] Descending : "))
+
+simple_selection_sort(data, sort_order)
