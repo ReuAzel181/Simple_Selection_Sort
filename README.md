@@ -1,2 +1,2 @@
 # Simple_Selection_Sort
-Simple Selection Sort: Ascending/Descending for numbers or words. User-defined data type and sorting order. New Update
+Simple Selection Sort: Ascending/Descending for numbers or words. User-defined data type and sorting order.
